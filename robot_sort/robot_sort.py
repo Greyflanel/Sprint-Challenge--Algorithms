@@ -97,7 +97,15 @@ class SortingRobot:
         Sort the robot's list.
         """
         # Fill this out
-        pass
+    
+        sort_complete = len(self._list)
+        while sort_complete != 0:
+            for i in range(len(self._list) - 1):
+                if self._list[i] > self._list[i + 1]:
+                    self._list[i], self._list[i + 1] = self._list[i + 1], self._list[i]
+        sort_complete -= 1
+
+        return self._list
 
 
 if __name__ == "__main__":
